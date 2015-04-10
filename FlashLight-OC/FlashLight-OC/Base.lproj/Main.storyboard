@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eUa-s1-AYX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2g-b6-nhN">
+                                <rect key="frame" x="277" y="179" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="e6q-gB-BS2"/>
+                                </constraints>
+                                <state key="normal" title="扫描">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanAYunzi:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Jw1-pW-Vv7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cke-LY-7OJ">
+                                <rect key="frame" x="277" y="332" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Yhh-GQ-vbJ"/>
+                                </constraints>
+                                <state key="normal" title="闪灯">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flashLight:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="d8F-45-a3z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请扫描Beacon的二维码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewg-Rf-V4L">
+                                <rect key="frame" x="128" y="434" width="345" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="345" id="pzu-0O-rqf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cke-LY-7OJ" firstAttribute="top" secondItem="D2g-b6-nhN" secondAttribute="bottom" constant="123" id="7T7-7k-ThL"/>
+                            <constraint firstAttribute="centerY" secondItem="Ewg-Rf-V4L" secondAttribute="centerY" constant="-144.5" id="NLy-Gx-9l8"/>
+                            <constraint firstAttribute="centerX" secondItem="D2g-b6-nhN" secondAttribute="centerX" id="RgJ-kT-8HS"/>
+                            <constraint firstAttribute="centerY" secondItem="D2g-b6-nhN" secondAttribute="centerY" constant="106" id="VJ6-80-Fov"/>
+                            <constraint firstAttribute="centerX" secondItem="Ewg-Rf-V4L" secondAttribute="centerX" constant="-0.5" id="gTK-hi-aRf"/>
+                            <constraint firstAttribute="centerX" secondItem="Cke-LY-7OJ" secondAttribute="centerX" id="sVN-m0-2xd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FhT-Wa-kQs"/>
+                    <connections>
+                        <outlet property="flashButton" destination="Cke-LY-7OJ" id="vqf-l2-Atx"/>
+                        <outlet property="stateText" destination="Ewg-Rf-V4L" id="XcL-7J-09a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="-376"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eml-Lt-l06">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="eUa-s1-AYX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WNj-Ja-N2K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="7Pz-Zk-e2R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="87Y-dM-OBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="-376"/>
+        </scene>
+    </scenes>
+</document>
