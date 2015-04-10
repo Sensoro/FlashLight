@@ -116,22 +116,22 @@
     if (_beacon.connectionStatus == SBKBeaconConnectionStatusDisconnected ) {
         _stateText.text = @"连接中...";
         [_beacon connectWithCompletion:^(NSError *error) {
-            if (error == nil) {
-                _stateText.text = @"已连接，闪灯中...";
-            }else{
+            if (error != nil) {
                 _stateText.text = @"连接失败";
                 [_beacon disconnect];
+            }else{
+                _stateText.text = @"已连接，闪灯中...";
+                [_beacon flashLightWithCommand:SBKCommonFlashLightCommand_22
+                                                        repeat:2
+                                                    completion:^(NSError *error) {
+                                                        if (error == nil) {
+                                                            _stateText.text = @"连接已断开";
+                                                        }else{
+                                                            _stateText.text = @"闪灯失败";
+                                                        }
+                                                        [_beacon disconnect];
+                                                    }];
             }
-            [_beacon flashLightWithCommand:SBKCommonFlashLightCommand_22
-                                                    repeat:2
-                                                completion:^(NSError *error) {
-                                                    if (error == nil) {
-                                                        _stateText.text = @"连接已断开";
-                                                    }else{
-                                                        _stateText.text = @"闪灯失败";
-                                                    }
-                                                    [_beacon disconnect];
-                                                }];
         }];
     }
 }
