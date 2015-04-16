@@ -14,9 +14,9 @@
 		635529AD1AD76E5400764D12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635529AC1AD76E5400764D12 /* Images.xcassets */; };
 		635529B01AD76E5400764D12 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635529AE1AD76E5400764D12 /* LaunchScreen.xib */; };
 		635529BC1AD76E5400764D12 /* FlashLight_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 635529BB1AD76E5400764D12 /* FlashLight_OCTests.m */; };
-		635529C61AD77AAE00764D12 /* SensoroBeaconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635529C51AD77AAE00764D12 /* SensoroBeaconKit.framework */; };
 		635529CA1AD7827200764D12 /* SENQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635529C91AD7827200764D12 /* SENQRCodeViewController.m */; };
 		635529CE1AD7855300764D12 /* KDXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 635529CD1AD7855300764D12 /* KDXAlertView.m */; };
+		843503011ADD00F800A37BED /* SensoroBeaconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843503001ADD00F800A37BED /* SensoroBeaconKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +43,11 @@
 		635529B51AD76E5400764D12 /* FlashLight-OCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FlashLight-OCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		635529BA1AD76E5400764D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		635529BB1AD76E5400764D12 /* FlashLight_OCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashLight_OCTests.m; sourceTree = "<group>"; };
-		635529C51AD77AAE00764D12 /* SensoroBeaconKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SensoroBeaconKit.framework; sourceTree = SOURCE_ROOT; };
 		635529C81AD7827200764D12 /* SENQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SENQRCodeViewController.h; sourceTree = "<group>"; };
 		635529C91AD7827200764D12 /* SENQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SENQRCodeViewController.m; sourceTree = "<group>"; };
 		635529CC1AD7855300764D12 /* KDXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDXAlertView.h; sourceTree = "<group>"; };
 		635529CD1AD7855300764D12 /* KDXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDXAlertView.m; sourceTree = "<group>"; };
+		843503001ADD00F800A37BED /* SensoroBeaconKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SensoroBeaconKit.framework; path = ../SensoroBeaconKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				635529C61AD77AAE00764D12 /* SensoroBeaconKit.framework in Frameworks */,
+				843503011ADD00F800A37BED /* SensoroBeaconKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +72,7 @@
 		635529931AD76E5400764D12 = {
 			isa = PBXGroup;
 			children = (
+				843503001ADD00F800A37BED /* SensoroBeaconKit.framework */,
 				6355299E1AD76E5400764D12 /* FlashLight-OC */,
 				635529B81AD76E5400764D12 /* FlashLight-OCTests */,
 				6355299D1AD76E5400764D12 /* Products */,
@@ -101,7 +102,6 @@
 				635529A91AD76E5400764D12 /* Main.storyboard */,
 				635529AC1AD76E5400764D12 /* Images.xcassets */,
 				635529AE1AD76E5400764D12 /* LaunchScreen.xib */,
-				635529C51AD77AAE00764D12 /* SensoroBeaconKit.framework */,
 				6355299F1AD76E5400764D12 /* Supporting Files */,
 			);
 			path = "FlashLight-OC";
@@ -366,6 +366,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"/Users/admin/WorkSpace/Sensoro-IOS/iOS-DEMO/FlashLight",
 				);
 				INFOPLIST_FILE = "FlashLight-OC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -381,6 +382,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"/Users/admin/WorkSpace/Sensoro-IOS/iOS-DEMO/FlashLight",
 				);
 				INFOPLIST_FILE = "FlashLight-OC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -442,6 +444,7 @@
 				635529C11AD76E5400764D12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		635529C21AD76E5400764D12 /* Build configuration list for PBXNativeTarget "FlashLight-OCTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +453,7 @@
 				635529C41AD76E5400764D12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
