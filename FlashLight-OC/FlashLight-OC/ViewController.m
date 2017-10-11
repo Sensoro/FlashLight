@@ -27,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.title = @"闪灯Demo";
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     _beacons = [NSMutableArray array];
     
     _UUIDs = @[@"23A01AF0-232A-4518-9C0E-323FB773F5EF",
@@ -72,6 +74,8 @@
             }
         }
         
+        
+
         if ( beacon == nil ) {//没有发现相应的beacon，说明用户拿到了没有扫描到的，此beacon可能没有在工作。
             NSString * tip = @"没有扫描到此Beacon，请稍候重试，或者确认此Beacon是否工作";
             KDXAlertView *av = [[KDXAlertView alloc] initWithTitle:@"提示"
